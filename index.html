@@ -1,74 +1,63 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Almac & Sons Vehicle Services | MOT & Servicing</title>
-   
-  <meta name="description" content="Family-run garage offering MOTs, servicing, and repairs by qualified mechanics.">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .page-image {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 2rem 0;
-      border-radius: 8px;
-    }
-
-    .image-wrapper {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-  </style>
+  <title>Almac & Sons Vehicle Services</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
   <header>
     <nav class="navbar">
-      <h1>Almac & Sons Vehicle Services</h1>
-      <button class="menu-toggle">☰</button> <!-- only visible on mobile -->
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="booking.html">Booking & Contact</a></li>
-      </ul>
+      <div class="nav-left">
+        <h1>Almac & Sons Vehicle Services</h1>
+      </div>
+
+      <div class="nav-center">
+        <h2>Home</h2> <!-- change this for other pages -->
+      </div>
+
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Booking & Contact</a></li>
+        </ul>
+        <button class="menu-toggle">☰</button>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h2>Your Trusted Local Garage</h2>
       <p>Family-run, honest pricing, and reliable service for over 20 years.</p>
     </section>
 
     <section>
       <h2>About Us</h2>
-      <p>Almac & Sons Vehicle Services is a family-run business proudly serving the local community. Our team of qualified mechanics specialises in MOT testing, vehicle servicing, diagnostics,
-        and general repairs for all makes and models.</p>
+      <p>Almac & Sons Vehicle Services is a family-run business proudly serving the local community. Our team of qualified mechanics specialises in MOT testing, vehicle servicing, diagnostics, and general repairs for all makes and models.</p>
       <p>Customer safety and satisfaction are at the heart of everything we do. We ensure every vehicle leaving our garage is roadworthy and compliant with legal MOT standards.</p>
-    <p>With over 30 years of experience, we pride ourselves on quality workmanship and excellent customer service. Whether you need a quick MOT or a full service, our skilled mechanics are here to help keep your vehicle running smoothly.</p>
-        <p>All vehicles will be subject to a safety inspection prior to any work being carried out. Customers will be advised of any defects or necessary repairs before any work begins.</p>
-        <p>Any parts removed will be held pending customer instructions regarding disposal. Customers will be given a copy of the safety inspection sheet detailing any work required in order to make informed decisions about their vehicle.</p>
+      <p>With over 30 years of experience, we pride ourselves on quality workmanship and excellent customer service. Whether you need a quick MOT or a full service, our skilled mechanics are here to help keep your vehicle running smoothly.</p>
     </section>
 
     <div class="image-wrapper">
-      <img src="assets/images/mechanic-working-car-suspension-repair-shop.jpg" alt="Inside our local family garage" class="page-image">
+      <img src="assets/images/joseph-pillado-n99UTGfbvFQ-unsplash.jpg" alt="Inside our local family garage" class="page-image">
     </div>
   </main>
 
   <footer>
-    <p style="text-align: center;">&copy; 2026 Almac & Sons Vehicle Services</p>
+    <p>&copy; 2026 Almac & Sons Vehicle Services</p>
   </footer>
-  <script>
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.navbar ul');
 
-menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('active');
-});
-</script>
+  <!-- Mobile menu JS -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-right ul');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
