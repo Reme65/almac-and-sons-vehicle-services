@@ -38,7 +38,7 @@ body { font-family: Arial, sans-serif; display: flex; flex-direction: column; mi
 }
 
 .nav-right li a {
-    color: #fff;
+    color: yellow;
     text-decoration: none;
     font-weight: bold;
 }
@@ -95,7 +95,7 @@ main section p {
 
 /* Section headers (H2) in content */
 main h2 {
-    color: yellow;           /* yellow page section headers */
+    color: black;          
     margin-top: 2rem;
     margin-bottom: 1rem;
 }

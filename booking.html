@@ -80,36 +80,33 @@
   <footer>
     <p style="text-align: center;">&copy; 2026 Almac & Sons Vehicle Services</p>
   </footer>
-  <!-- Mobile menu JS -->
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav-right ul');
+<!-- Mobile menu JS -->
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-right ul');
 
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  </script>
-  <script>
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-right ul');
-menuToggle.addEventListener('click', () => nav.classList.toggle('active'));
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
 
-// Booking form confirmation
-const bookingForm = document.getElementById('bookingForm');
-bookingForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // prevent actual form submission
-    // Simple validation check
-    if (!bookingForm.checkValidity()) {
+  // Booking form confirmation
+  const bookingForm = document.getElementById('bookingForm');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent actual form submission
+      // Simple validation check
+      if (!bookingForm.checkValidity()) {
         alert('Please fill in all required fields.');
         return;
-    }
-    // Show confirmation pop-up
-    const name = document.getElementById('name').value;
-    const service = document.getElementById('service').value;
-    const date = document.getElementById('date').value;
-    alert(`Thank you, ${name}!\nYour booking for ${service.toUpperCase()} on ${date} has been received.`);
-    bookingForm.reset(); // optional: clears the form
-});
+      }
+      // Show confirmation pop-up
+      const name = document.getElementById('name').value;
+      const service = document.getElementById('service').value;
+      const date = document.getElementById('date').value;
+      alert(`Thank you, ${name}!\nYour booking for ${service.toUpperCase()} on ${date} has been received.`);
+      bookingForm.reset(); // optional: clears the form
+    });
+  }
 </script>
 </body>
 </html>
