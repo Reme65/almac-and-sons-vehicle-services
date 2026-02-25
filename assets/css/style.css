@@ -8,39 +8,46 @@ body { font-family: Arial, sans-serif; display: flex; flex-direction: column; mi
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    flex-wrap: wrap;
-    background:#003366;
+    background-color: #003366;
     padding: 1rem 2rem;
+    flex-wrap: nowrap;
 }
 
-.navbar h1 {
+.nav-left h1 {
+    color: red;              /* stand-out business name */
     font-size: 1.5rem;
-    color: #fff;
     margin: 0;
 }
 
-.navbar ul {
+.nav-center h2 {
+    color: #fff;             /* white current page name */
+    font-size: 0.85rem;      /* smaller than h1 */
+    margin: 0;
+    text-align: center;
+}
+
+.nav-right ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.navbar li {
+.nav-right li {
     margin-left: 2rem;
 }
 
-.navbar li a {
-    color:#fff;
+.nav-right li a {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
-.navbar li a:hover {
+.nav-right li a:hover {
     text-decoration: underline;
 }
 
-/* Hamburger menu for mobile */
+/* Hamburger menu hidden by default */
 .menu-toggle {
     display: none;
     background: none;
@@ -66,12 +73,16 @@ footer {
 }
 
 /* Page images */
-.page-image {
-    display: block;
+.image-wrapper {
     width: 100%;
     max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.page-image {
+    width: 100%;
     height: auto;
-    margin: 1.5rem auto 2.5rem auto; /* spacing top & bottom */
+    display: block;
     border-radius: 8px;
 }
 
@@ -82,27 +93,37 @@ main section p {
     line-height:1.6;
 }
 
+/* Section headers (H2) in content */
+main h2 {
+    color: yellow;           /* yellow page section headers */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
 /* Mobile <820px */
 @media (max-width: 820px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
-    .menu-toggle {
-        display: block;
+    .nav-center h2 {
         margin-top: 0.5rem;
     }
-    .navbar ul {
+    .nav-right ul {
         display: none;
         flex-direction: column;
         width: 100%;
         margin-top: 0.5rem;
     }
-    .navbar ul.active {
+    .nav-right ul.active {
         display: flex;
     }
-    .navbar li {
+    .nav-right li {
         margin: 0.5rem 0;
+    }
+    .menu-toggle {
+        display: block;
+        margin-top: 0.5rem;
     }
     main section p {
         font-size: 0.95rem;

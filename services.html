@@ -61,5 +61,14 @@
   <footer>
     <p style="text-align: center;">&copy; 2026 Almac & Sons Vehicle Services</p>
   </footer>
+  <!-- Mobile menu JS -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-right ul');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
