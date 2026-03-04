@@ -269,12 +269,28 @@ main {
     padding: 0.5rem;
   }
 
+  /* -------------------------
+   PAGE IMAGES - DESKTOP & MOBILE
+------------------------- */
+.page-image,
+.hero-image img,
+.service-image img {
+  width: 100%;
+  height: 50vh;        /* fills half the viewport height */
+  object-fit: cover;   /* crops without stretching */
+  border-radius: 5px;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Reduce height on smaller screens */
+@media (max-width: 820px) {
   .page-image,
   .hero-image img,
   .service-image img {
-    height: 180px;
-    max-height: 180px;
+    height: 30vh;       /* smaller on tablet/mobile */
   }
+}
 
   .booking-form {
     grid-template-columns: 1fr; /* stack form fields on mobile */
