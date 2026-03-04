@@ -71,6 +71,7 @@ main {
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 main h2 {
@@ -84,10 +85,10 @@ main h2 {
 .hero-image img,
 .service-image img {
   width: 100%;
-  height: calc(100vh - 250px);      /* fills available vertical space */
+  height: 60vh;      /* fills available vertical space */
   object-fit: cover;
   border-radius: 5px;
-  margin-top: 1rem;
+ 
   display: block;
 }
 
@@ -179,6 +180,11 @@ main h2 {
 
 .footer-logo {
   width: 40px;
+}
+@media (min-width: 821px) {
+  body {
+    overflow-y: hidden;
+  }
 }
 
 /* ==========================
