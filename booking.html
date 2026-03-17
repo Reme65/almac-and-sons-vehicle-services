@@ -86,7 +86,21 @@
     Images courtesy of <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a> and <a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik</a>. Favicon from <a href="https://favicon.io/" target="_blank" rel="noopener noreferrer">favicon.io</a>.
   </div>
 </footer>
+<script>
+/* ==========================
+   AUTO-FILL REGISTRATION
+========================== */
 
+const params = new URLSearchParams(window.location.search);
+const reg = params.get("reg");
+
+if (reg) {
+  const regField = document.getElementById("vehicle-reg");
+  if (regField) {
+    regField.value = reg;
+  }
+}
+</script>
 <script>
   // Prevent selecting past dates
   const dateInput = document.querySelector('#date');
